@@ -20,31 +20,23 @@
 
 Приклад створення об'єкту класу:
 ```python
-student = Student(name="Ivan", age=30, grade="2")
-```
-
-#### Task 2: Створення методу
-Додайте метод до класу Student з назвою `display_info()`, який виводить інформацію про студента у форматі "Name: [name], Age: [age], Grade: [grade]".
-
-Приклад використання методу:
-```python
-student = Student(name="Ivan", age=30, grade="2")
-print(student.display_info())  # Виведе: Name: Ivan, Age: 30, Grade: 2
-```
-
-#### Task 3: Наслідування
-Створіть два класи: Animal і Dog. Animal повинен мати атрибути name і sound. Додайте метод make_sound() до класу Animal, який повертає рядок "[name]: [sound]". Клас Dog повинен успадковувати від Animal і мати додатковий атрибут breed.
-
-Приклад використання класів:
-```python
-animal = Animal(name="Lala", sound="...")
-dog = Dog(name="Lala", sound="Auuuuuuu", breed="Spitz")
-print(animal.make_sound())  # Виведе: Lala: ...
-print(dog.make_sound())  # Виведе: Lala: Auuuuuuu
+class Student:
+    def __init__(self, name, age, grade):
+        self.name = name
+        self.age = age
+        self.grade = grade
+        
+    def display_info(self):
+        return f'name: {self.name}, age: {self.age}, grade: {self.grade}'
+#Приклад використання
+student = Student(name="Vlad", age=18, grade="A")
+print(student.display_info())
 ```
 
 ### Результати:
 Кожен з класів та методів виконує відповідну функціональність, яка була описана в завданні.
+![image](https://github.com/yatagarasu123/lab10/assets/145234911/d7886726-f90f-4e35-bdf5-c0cfa86ce384)
+
 
 ### Висновки:
 Лабораторна робота дозволила глибше ознайомитися з основними концепціями об'єктно-орієнтованого програмування в Python, а саме створення класів, методів, наслідування та інкапсуляції.
